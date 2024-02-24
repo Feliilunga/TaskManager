@@ -1,0 +1,9 @@
+<h1>Liste des utilisateurs</h1>
+<ul>
+    <li *ngFor="let user of users">
+        {{ user.name }} - {{ user.email }} -  {{ user.role?.role}}
+
+    </li>
+</ul>
+<router-outlet></router-outlet>
+

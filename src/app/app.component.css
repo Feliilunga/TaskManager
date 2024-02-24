@@ -1,0 +1,73 @@
+/* Style pour un en-tête réactif avec animation au survol (bleu foncé, texte plus grand) */
+
+/* Style de base pour le header */
+header {
+    background-color: #6fa8dc; /* Bleu légèrement plus foncé */
+    color: white;
+    padding: 15px 20px; /* Ajustement du padding */
+}
+
+/* Style de base pour la barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style des éléments de la barre de navigation */
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    padding: 12px 18px; /* Ajustement du padding */
+    transition: transform 0.3s ease-in-out; /* Animation au survol */
+    font-size: 18px; /* Taille de texte plus grande */
+}
+
+.nav-item:hover {
+    transform: scale(1.1); /* Légère mise à l'échelle au survol */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Style des liens des listes déroulantes */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    content: '\25BC';
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #6fa8dc; /* Bleu légèrement plus foncé pour la liste déroulante */
+    padding: 12px; /* Ajustement du padding */
+    transition: opacity 0.3s ease-in-out; /* Animation au survol */
+    opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown-item {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 16px; /* Taille de texte légèrement plus grande */
+}
+
+.dropdown-item:hover {
+    background-color: #4b8baf; /* Bleu clair au survol */
+}
