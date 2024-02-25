@@ -1,0 +1,18 @@
+<div class="team-list">
+  <h1>All Team Company</h1>
+  <div *ngFor="let team of team" class="team-card">
+    <h2>{{ team.name }}</h2>
+    <div class="team-details">
+      <div class="manager">
+        <img [src]="imageUrl" alt="Manager">
+        <span>{{ team.manager?.name }}</span>
+      </div>
+      <div class="department">
+        <span>Department: {{ team.department }}</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>
